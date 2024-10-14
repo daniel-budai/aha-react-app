@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(to bottom, #3f6bc0, #3fb1c0);
+}
+
+.navbar {
+  background-color: rgba(63, 130, 192, 1);
+  box-shadow: 0 2px 4px #0000003d;
+}
+
+.todo-text {
+  @apply text-[18px] font-normal leading-[18px] text-[#141414];
+}
+
+.todo-completed {
+  @apply line-through text-gray-400;
+}
+
+.todo-separator {
+  @apply border-b border-gray-200;
+}
+
+.add-todo-btn {
+  @apply bg-green-500 text-white w-8 h-8 flex items-center justify-center rounded-sm;
+}
