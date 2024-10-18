@@ -35,6 +35,11 @@ jobs:
           name: dist-folder
           path: ./dist
 
+      - name: List uploaded artifacts
+        run: |
+          echo "Uploaded artifacts:"
+          ls -la ${{ runner.temp }}/_github_home/_actions/actions/upload-artifact
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
