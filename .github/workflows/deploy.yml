@@ -16,11 +16,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Install modules
         run: npm install
 
       - name: Build dist
         run: npm run build
+
+      - name: List dist folder contents
+        run: ls -la ./dist
 
       - name: Setup pages
         uses: actions/configure-pages@v4
@@ -29,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-folder
-          path: "./dist"
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
